@@ -1,14 +1,10 @@
 import React, {useState, useEffect} from 'react'
-<<<<<<< HEAD
-import { Link, useParams } from 'react-router-dom'
 import ChatBox from '../components/ChatBox/ChatBox'
-=======
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import axios from "axios";
 import styled from "styled-components";
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
->>>>>>> development
 
 const Button = styled.button`
   background: transparent;
@@ -73,7 +69,9 @@ const ItemView = ({items, updateItemState}) => {
         <h1>{item.name}</h1>
         <img src={item.images} alt={item.description} />
         <p>{item.description}</p>
-
+        <p>{item.status}</p>
+        <p>{item.quantity}</p>
+        <p>{item.genus}</p>
        
 
         <Link to={`/item/edit/${item._id}`} > Edit Item </Link>
